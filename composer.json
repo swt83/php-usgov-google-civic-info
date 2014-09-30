@@ -1,7 +1,7 @@
 {
-    "name": "vendor/package",
-    "description": "",
-    "homepage": "",
+    "name": "travis/civic",
+    "description": "A PHP package for working w/ the Google Civic Info API.",
+    "homepage": "https://github.com/swt83/php-usgov-google-civic",
     "license": "MIT",
     "authors": [
         {
@@ -12,19 +12,16 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": ""
+            "url": "https://github.com/swt83/php-ex.git"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.1.*"
+        "travis/ex": "*"
     },
     "autoload": {
-        "classmap": [
-            "src/commands"
-        ],
         "psr-0": {
-            "Vendor\\": "src/"
+            "Travis\\": "src/"
         }
     },
     "minimum-stability": "dev"
