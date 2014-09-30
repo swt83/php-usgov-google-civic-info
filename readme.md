@@ -12,16 +12,16 @@ Normal install via Composer.
 
 The [API](https://developers.google.com/civic-information/docs/v2/elections) documentation is a little lacking, so here is a map of method names to make things easier:
 
-### Election Data
+** Election Data **
 
 - ``elections``
-` ``voterinfo``
+- ``voterinfo``
 
-### Representative Data
+** Representative Data **
 
 Coming soon.
 
-### Divisions Data
+** Divisions Data **
 
 Coming soon.
 
