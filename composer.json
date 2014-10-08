@@ -1,7 +1,7 @@
 {
     "name": "travis/googlecivicinfo",
     "description": "A PHP package for working w/ the Google Civic Info API.",
-    "homepage": "https://github.com/swt83/php-usgov-google-civic",
+    "homepage": "https://github.com/swt83/php-usgov-google-civic-info",
     "license": "MIT",
     "authors": [
         {
