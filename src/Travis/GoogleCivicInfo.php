@@ -2,7 +2,7 @@
 
 namespace Travis;
 
-class Civic
+class GoogleCivicInfo
 {
     /**
      * Magic method to handle API calls.
@@ -53,7 +53,7 @@ class Civic
             $result = json_decode($response);
 
             // catch error...
-            if (ex($result, 'error')) trigger_error(ex($result, 'error.message'));
+            #if (ex($result, 'error')) trigger_error(ex($result, 'error.message'));
 
             // decode
             return $result;

@@ -2,7 +2,7 @@
 
 A PHP package for working w/ the Google Civic Info API.
 
-*THE API IS NOT WORKING PROPERLY AT THIS TIME*
+NOTE: The API is not very useful, as the data is not always available.
 
 ## Install
 
@@ -30,9 +30,13 @@ Coming soon.
 Just call the desired method and pass arguments as a single array:
 
 ```php
-$test = Travis\Civic::elections(array(
+$test = Travis\GoogleCivic::elections(array(
     'key' => '<YOUR_GOOGLE_API_KEY>', // always required
 ));
 ```
 
 Check the [API](https://developers.google.com/civic-information/docs/v2/elections) documentation for more information.
+
+### Errors
+
+Check the response object for an ``error`` value to detect errors.
