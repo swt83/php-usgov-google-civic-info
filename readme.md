@@ -30,7 +30,7 @@ Coming soon.
 Just call the desired method and pass arguments as a single array:
 
 ```php
-$test = Travis\GoogleCivic::elections(array(
+$test = Travis\GoogleCivicInfo::elections(array(
     'key' => '<YOUR_GOOGLE_API_KEY>', // always required
 ));
 ```
