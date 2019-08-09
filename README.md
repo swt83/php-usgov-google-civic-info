@@ -2,41 +2,42 @@
 
 A PHP package for working w/ the Google Civic Info API.
 
-NOTE: The API is not very useful, as the data is not always available.
-
 ## Install
 
 Normal install via Composer.
-
-## Methods
-
-The [API](https://developers.google.com/civic-information/docs/v2/elections) documentation is a little lacking, so here is a map of method names to make things easier:
-
-** Election Data **
-
-- ``elections``
-- ``voterinfo``
-
-** Representative Data **
-
-Coming soon.
-
-** Divisions Data **
-
-Coming soon.
 
 ## Usage
 
 Just call the desired method and pass arguments as a single array:
 
 ```php
-$test = Travis\GoogleCivicInfo::elections(array(
+use Travis\GoogleCivicInfo as Civic;
+
+// show all elections in the system
+$test = Civic::elections([
     'key' => '<YOUR_GOOGLE_API_KEY>', // always required
-));
+]);
+
+// show election info based on address
+$test = Civic::voterinfo([
+    'key' => '<YOUR_GOOGLE_API_KEY>', // always required
+    'address' => '<YOUR_MAILING_ADDRESS>',
+]);
+
+// show representative information based on address
+$test = Civic::representatives([
+    'key' => '<YOUR_GOOGLE_API_KEY>', // always required
+    'address' => '<YOUR_MAILING_ADDRESS>',
+]);
 ```
 
 Check the [API](https://developers.google.com/civic-information/docs/v2/elections) documentation for more information.
 
-### Errors
+## Issues
 
-Check the response object for an ``error`` value to detect errors.
+From what I can gather:
+
+- They will only provide useful election data a month before the election.
+- They will only provide election data for cities of population 250K or more.
+
+See the [data guidelines](https://developers.google.com/civic-information/docs/data_guidelines) for more information.
